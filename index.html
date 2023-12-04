@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Document</title>
+  <style>
+    body {
+      font-weight: bold;
+      font-size: 40px;
+    }
+
+    @media (pointer: coarse) {
+
+      /* mobile device */
+      html {
+        background: green
+      }
+
+      ;
+
+      body::before {
+        content: 'Mobile'
+      }
+    }
+
+    @media (pointer: fine),
+    (pointer: none) {
+
+      /* desktop */
+      html {
+        background: red
+      }
+
+      body::before {
+        content: 'Desktop'
+      }
+    }
+
+    @media (pointer: fine) and (any-pointer: coarse) {
+
+      /* touch desktop */
+      html {
+        background: blue;
+        content: 'tablet'
+      }
+
+      ;
+
+      body::before {
+        content: 'Tablet'
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
